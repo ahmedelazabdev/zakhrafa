@@ -5,25 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>أفضل أداة زخرفة أسماء ونصوص عربي وإنجليزي فوري مجاناً | مقبولة في ببجي وفيسبوك</title>
     
-    <!-- Meta Tags للسيو -->
     <meta name="description" content="أقوى أداة زخرفة أسماء ونصوص بالعربي والإنجليزي فورية. زخارف ببجي وفري فاير وإنستقرام مقبولة، خطوط يونيكود نادرة، وحركات وتشكيل للأسماء والنصوص بضغطة واحدة.">
-    <meta name="keywords" content="زخرفة اسماء, زخرفة نصوص, زخرفة انجليزي, زخرفة عربي, زخرفة ببجي, خطوط انستقرام, زخرفة يقبلها الفيس, name decorator, fancy text">
+    <meta name="keywords" content="زخرفة اسماء, زخرفة نصوص, زخرفة انجليزي, زخرفة عربي, زخرفة ببجي, خطوط انستقرام">
     <meta name="robots" content="index, follow, max-image-preview:large">
-    <link rel="canonical" href="https://example.com/name-text-decorator">
+    <link rel="canonical" href="https://ahmedelazabdev.github.io/zakhrafa/">
 
-    <!-- Open Graph -->
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="موقع زخرفة أسماء ونصوص احترافي عربي وإنجليزي">
-    <meta property="og:description" content="زخرف اسمك أو نصك بأكثر من 40 شكلاً احترافياً يقبله فيسبوك وببجي، مع إمكانية النسخ الفوري.">
+    <!-- تحسين استدعاء خط Tajawal فقط بالأوزان المطلوبة مع font-display=swap -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@500;700;800&display=swap" rel="stylesheet">
 
-    <!-- Stylesheets -->
+    <!-- ملفات التنسيق -->
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="ads.css">
 
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&family=Amiri:wght@700&display=swap" rel="stylesheet">
+    <!-- سكريبتات مؤجلة لتفادي حظر الرندر Render-Blocking -->
+    <script src="decorator.js" defer></script>
+    <script src="ads.js" defer></script>
 
     <!-- Schema Markup (JSON-LD) -->
     <script type="application/ld+json">
@@ -33,15 +31,10 @@
         {
           "@type": "WebApplication",
           "name": "أداة زخرفة الأسماء والنصوص الفورية",
-          "url": "https://example.com/name-text-decorator",
+          "url": "https://ahmedelazabdev.github.io/zakhrafa/",
           "applicationCategory": "UtilitiesApplication",
           "operatingSystem": "All",
-          "description": "أداة مجانية لتوليد نصوص وأسماء مزخرفة بالعربية والإنجليزية باستخدام خطوط يونيكود ورموز مقبولة في الألعاب ومنصات التواصل.",
-          "offers": {
-            "@type": "Offer",
-            "price": "0",
-            "priceCurrency": "USD"
-          }
+          "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
         },
         {
           "@type": "FAQPage",
@@ -51,15 +44,7 @@
               "name": "هل الزخارف مقبولة في لعبة ببجي موبايل وفري فاير؟",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "نعم، تتضمن الأداة قسماً مخصصاً لرموز الألعاب (Gaming Nicknames) متوافق مع نظام اليونيكود المعتمد في PUBG Mobile وFree Fire دون مشاكل في الحظر."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "هل تعمل الزخرفة على بايو إنستقرام وفيسبوك؟",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "نعم، كافة الخطوط الإنجليزية والأشكال العربية تعتمد على رموز محارف اليونيكود الرسمية التي تظهر في جميع التطبيقات والمتصفحات."
+                "text": "نعم، تتضمن الأداة قسماً مخصصاً لرموز الألعاب متوافق مع نظام اليونيكود المعتمد في PUBG وFree Fire."
               }
             }
           ]
@@ -70,7 +55,6 @@
 </head>
 <body>
 
-    <!-- الهيدر -->
     <header class="site-header">
         <div class="container header-container">
             <div class="logo">
@@ -86,24 +70,23 @@
         </div>
     </header>
 
-    <!-- مساحة إعلانية علوية -->
+    <!-- إعلان علوي محجوز المساحة لمنع الـ CLS -->
     <div class="container">
         <div class="ad-space ad-top-leaderboard" data-ad-slot="top-header"></div>
     </div>
 
-    <!-- الأداة التفاعلية -->
     <main class="container" id="tool">
         <section class="tool-card">
             <div class="input-container">
                 <label for="inputText" class="input-label">اكتب أو الصق الاسم أو النص هنا (عربي أو إنجليزي):</label>
                 <div class="input-wrapper">
-                    <input type="text" id="inputText" placeholder="مثال: محمد / Legend / الملك ..." autocomplete="off" autofocus>
-                    <button id="clearBtn" class="btn-clear" title="تفريغ">✕</button>
+                    <input type="text" id="inputText" placeholder="مثال: البرنس Legend" autocomplete="off" aria-label="أدخل النص للزخرفة">
+                    <button id="clearBtn" class="btn-clear" aria-label="تفريغ النص">✕</button>
                 </div>
             </div>
 
-            <!-- أزرار الفلترة والتصنيفات -->
-            <div class="filters-container">
+            <!-- أزرار التصنيف بنسب تباين عالية لـ Accessibility 100% -->
+            <div class="filters-container" role="tablist">
                 <button class="filter-btn active" data-filter="all">الكل (All)</button>
                 <button class="filter-btn" data-filter="gaming">🎮 ألعاب (ببجي وفري فاير)</button>
                 <button class="filter-btn" data-filter="english">🔠 خطوط إنجليزية (Fonts)</button>
@@ -111,55 +94,40 @@
                 <button class="filter-btn" data-filter="aesthetic">💎 فخمة ومميزة</button>
             </div>
 
-            <!-- شبكة عرض النتائج المزخرفة -->
+            <!-- البطاقات الافتراضية مطبوعة سلفاً في الـ HTML لمنع الـ Layout Shift نهائياً -->
             <div class="results-grid" id="resultsGrid">
-                <!-- يتم توليد البطاقات ديناميكياً بواسطة decorator.js -->
+                <div class="result-card" data-category="gaming"><span class="decorated-text">꧁༺ البرنس Legend ༻꧂</span><button class="btn-copy" aria-label="نسخ">نسخ</button></div>
+                <div class="result-card" data-category="gaming"><span class="decorated-text">亗『 البرنس Legend 』亗</span><button class="btn-copy" aria-label="نسخ">نسخ</button></div>
+                <div class="result-card" data-category="gaming"><span class="decorated-text">⚔️ البرنس Legend ⚔️</span><button class="btn-copy" aria-label="نسخ">نسخ</button></div>
+                <div class="result-card" data-category="gaming"><span class="decorated-text">♛ البرنس Legend ♛</span><button class="btn-copy" aria-label="نسخ">نسخ</button></div>
+                <div class="result-card" data-category="english"><span class="decorated-text">البرنس 𝗟𝗲𝗴𝗲𝗻𝗱</span><button class="btn-copy" aria-label="نسخ">نسخ</button></div>
+                <div class="result-card" data-category="english"><span class="decorated-text">البرنس 𝘓𝘦𝘨𝘦𝘯𝘥</span><button class="btn-copy" aria-label="نسخ">نسخ</button></div>
+                <div class="result-card" data-category="english"><span class="decorated-text">البرنس 𝔏𝔢𝔤𝔢𝔫𝔡</span><button class="btn-copy" aria-label="نسخ">نسخ</button></div>
+                <div class="result-card" data-category="english"><span class="decorated-text">البرنس 𝕃𝕖𝕘𝕖𝕟𝕕</span><button class="btn-copy" aria-label="نسخ">نسخ</button></div>
+                <div class="result-card" data-category="aesthetic"><span class="decorated-text">✧ البرنس Legend ✧</span><button class="btn-copy" aria-label="نسخ">نسخ</button></div>
+                <div class="result-card" data-category="aesthetic"><span class="decorated-text">✿ البرنس Legend ✿</span><button class="btn-copy" aria-label="نسخ">نسخ</button></div>
+                <div class="result-card" data-category="arabic"><span class="decorated-text">اـلـبـرنـسـ Legend</span><button class="btn-copy" aria-label="نسخ">نسخ</button></div>
+                <div class="result-card" data-category="arabic"><span class="decorated-text">«۩๑ البرنس Legend ๑۩»</span><button class="btn-copy" aria-label="نسخ">نسخ</button></div>
             </div>
         </section>
 
-        <!-- مساحة إعلانية وسطى -->
         <div class="ad-space ad-middle-banner" data-ad-slot="middle-content"></div>
 
-        <!-- محتوى السيو المتصدر -->
         <article class="seo-article">
             <section class="content-block" id="pubg-names">
                 <h2>أقوى موقع زخرفة نصوص وأسماء احترافية ومقبولة</h2>
-                <p>
-                    تعتبر زخرفة الأسماء والنصوص من أكثر الوسائل تميزاً على شبكة الإنترنت، سواء كنت تبحث عن اسم حساب فخم في ألعاب مثل <strong>PUBG Mobile</strong> أو <strong>Free Fire</strong>، أو ترغب في تزيين سيرة بروفايلك (Bio) على <strong>إنستقرام</strong> و<strong>تيك توك</strong> و<strong>فيسبوك</strong>.
-                </p>
-                <p>
-                    تعتمد أداتنا على تحويل الحروف العادية إلى <em>محارف يونيكود (Unicode Symbols)</em> نادرة ومعترف بها عالمياً، مما يضمن لك أن الاسم سيظهر بشكله الجميل والمزخرف على هواتف أندرويد وآيفون وأجهزة الكمبيوتر دون أن يتحول إلى مربعات مفقودة أو علامات استفهام.
-                </p>
+                <p>تعتبر زخرفة الأسماء والنصوص من أكثر الوسائل تميزاً على شبكة الإنترنت، سواء كنت تبحث عن اسم حساب فخم في ألعاب مثل <strong>PUBG Mobile</strong> أو <strong>Free Fire</strong>، أو ترغب في تزيين سيرة بروفايلك (Bio) على <strong>إنستقرام</strong> و<strong>فيسبوك</strong>.</p>
+                <p>تعتمد أداتنا على محارف اليونيكود الرسمية مما يضمن ظهور الاسم بشكله الصحيح على جميع الهواتف الذكية دون ظهور علامات استفهام أو رموز غير مدعومة.</p>
             </section>
 
-            <section class="content-block">
-                <h2>أنواع الزخارف المتاحة في الأداة</h2>
-                <div class="features-list">
-                    <div class="feature-item">
-                        <h3>1. خطوط إنجليزية نادرة (Aesthetic English Fonts)</h3>
-                        <p>تحويل حروف الإنجليزية إلى خط عريض (𝗕𝗼𝗹𝗱)، خط مائل (𝘐𝘵𝘢𝘭𝘪𝘤)، خط قوطي قديم (𝔉𝔯𝔞𝔨𝔱𝔲𝔯)، خط مفرغ (𝔻𝕠𝕦𝕓𝕝𝕖-𝕊𝕥𝕣𝕦𝕔𝕜)، وحروف دائرية ومربوطة.</p>
-                    </div>
-                    <div class="feature-item">
-                        <h3>2. زخارف الألعاب (Gaming Nicknames)</h3>
-                        <p>إضافة أجنحة ملائكية، سيوف، تيجان ملكية، ورموز فخمة مثل <code>꧁༺ ༻꧂</code> و <code>亗</code> و <code>⚔️</code> و <code>♛</code>.</p>
-                    </div>
-                    <div class="feature-item">
-                        <h3>3. التشكيل والحركات والمد العربي</h3>
-                        <p>تنسيق الكلمات العربية بالحركات الإعرابية التجميلية، مع إضافة المد العربي (تطويل الحروف) لإضفاء طابع كلاسيكي مهيب.</p>
-                    </div>
-                </div>
-            </section>
-
-            <!-- إعلان مدمج -->
             <div class="ad-space ad-native" data-ad-slot="in-article"></div>
 
             <section class="content-block" id="guide">
                 <h2>كيف تنسخ الزخرفة بضغطة زر واحدة؟</h2>
                 <ol class="steps-list">
-                    <li>اكتب اسمك أو عبارتك داخل مربع الإدخال في أعلى الصفحة.</li>
-                    <li>تظهر النتائج فوراً ومباشرة بمجرد كتابة أول حرف.</li>
-                    <li>اختر النمط المناسب أو استخدم أزرار التصنيف في الأعلى لتسهيل الاختيار.</li>
-                    <li>انقر مباشرة على البطاقة أو على زر <strong>"نسخ"</strong> ليتم حفظ النص في الحافظة فوراً وتظهر رسالة تأكيد خضراء.</li>
+                    <li>اكتب اسمك أو عبارتك داخل مربع الإدخال في الأعلى.</li>
+                    <li>تظهر النتائج فوراً مع الكتابة.</li>
+                    <li>اضغط على أي بطاقة أو على زر <strong>"نسخ"</strong> ليتم نسخ الزخرفة لحافظتك مباشرة.</li>
                 </ol>
             </section>
 
@@ -168,34 +136,25 @@
                 <div class="faq-list">
                     <details class="faq-item" open>
                         <summary>لماذا ترفض بعض الألعاب مثل ببجي الاسم المزخرف أحياناً؟</summary>
-                        <p>ترفض اللعبة الاسم إذا احتوى على رموز خاصة غير مسجلة في نظام الترميز للعبة، أو إذا تجاوز طول الاسم المسموح (14 حرفاً في ببجي). استخدم تصنيف "ألعاب" المخصص في أداتنا لضمان قبول الاسم بنسبة 100%.</p>
-                    </details>
-                    <details class="faq-item">
-                        <summary>هل تستهلك الأداة باقة الإنترنت أو تتطلب تسجيل دخول؟</summary>
-                        <p>كلا، الأداة مجانية بالكامل، وتعمل فورياً من متصفحك مباشرة بدون تحميل برامج وبدون أي رسوم أو تسجيل مسبق.</p>
+                        <p>ترفض اللعبة الاسم إذا احتوى على رموز خاصة غير مسجلة في نظام الترميز للعبة، أو إذا تجاوز طول الاسم 14 حرفاً. زخارف قسم "الألعاب" في أداتنا مقبولة بنسبة 100%.</p>
                     </details>
                 </div>
             </section>
         </article>
     </main>
 
-    <!-- شريط إعلان سفلي ثابت -->
     <div class="ad-sticky-footer">
         <div class="ad-sticky-container">
-            <button class="ad-close-btn" id="closeStickyAd" aria-label="إغلاق">✕</button>
+            <button class="ad-close-btn" id="closeStickyAd" aria-label="إغلاق الإعلان">✕</button>
             <div class="ad-space ad-bottom-banner" data-ad-slot="sticky-footer"></div>
         </div>
     </div>
 
-    <!-- التذييل -->
     <footer class="site-footer">
         <div class="container">
             <p>جميع الحقوق محفوظة &copy; 2026 | أداة زخرفة الأسماء والنصوص المتقدمة.</p>
         </div>
     </footer>
 
-    <!-- ملفات الجافاسكريبت -->
-    <script src="decorator.js"></script>
-    <script src="ads.js"></script>
 </body>
 </html>
