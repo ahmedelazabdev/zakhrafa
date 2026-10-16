@@ -1,127 +1,295 @@
-/* ===================================================
-   تنسيقات نظام الإعلانات المنفصل (Ads Module Styling)
-   =================================================== */
-
-.ad-space {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 20px auto;
-    background-color: #f1f5f9;
-    border: 1px dashed #cbd5e1;
-    border-radius: 8px;
-    overflow: hidden;
-    position: relative;
-    text-align: center;
-    min-height: 90px;
-    transition: all 0.3s ease;
+:root {
+    --primary: #4f46e5;
+    --primary-hover: #4338ca;
+    --accent: #059669;
+    --bg-page: #f8fafc;
+    --surface: #ffffff;
+    --text-main: #0f172a;
+    --text-muted: #334155; /* تباين مرتفع جداً يتجاوز 7:1 لضمان درجة 100 في Accessibility */
+    --border: #cbd5e1;
+    --radius: 12px;
+    --shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    --font: 'Tajawal', sans-serif;
 }
 
-/* علامة توضيحية لكونها مساحة إعلانية */
-.ad-space::before {
-    content: "إعلان";
-    position: absolute;
-    top: 4px;
-    left: 6px;
-    font-size: 10px;
-    color: #94a3b8;
-    background: rgba(255, 255, 255, 0.8);
-    padding: 1px 6px;
-    border-radius: 4px;
-    pointer-events: none;
-    z-index: 1;
-}
-
-/* إعلان البانر العلوي (Leaderboard: 728x90 أو 970x90 أو متجاوب) */
-.ad-top-leaderboard {
-    width: 100%;
-    max-width: 970px;
-    min-height: 90px;
-}
-
-/* إعلان المحتوى الداخلي */
-.ad-middle-banner {
-    width: 100%;
-    max-width: 728px;
-    min-height: 250px;
-}
-
-/* إعلان النيتيف وسط المقال */
-.ad-native {
-    width: 100%;
-    min-height: 120px;
-    background-color: #ffffff;
-    border: 1px solid #e2e8f0;
-}
-
-/* شريط الإعلان الثابت في أسفل الشاشة (Sticky Mobile / Desktop) */
-.ad-sticky-footer {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    width: 100%;
-    background: #ffffff;
-    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1);
-    z-index: 9999;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 6px 12px;
-}
-
-.ad-sticky-container {
-    position: relative;
-    max-width: 728px;
-    width: 100%;
-}
-
-.ad-bottom-banner {
+* {
+    box-sizing: border-box;
     margin: 0;
-    min-height: 60px;
-    border: none;
-    background: transparent;
+    padding: 0;
 }
 
-.ad-bottom-banner::before {
-    display: none;
+body {
+    font-family: var(--font);
+    background-color: var(--bg-page);
+    color: var(--text-main);
+    line-height: 1.7;
+    direction: rtl;
+    padding-bottom: 75px;
 }
 
-/* زر إغلاق الإعلان السفلي */
-.ad-close-btn {
-    position: absolute;
-    top: -14px;
-    right: -10px;
-    background: #0f172a;
-    color: #ffffff;
-    border: 2px solid #ffffff;
-    border-radius: 50%;
-    width: 24px;
-    height: 24px;
-    font-size: 12px;
-    line-height: 1;
-    cursor: pointer;
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.site-header {
+    background-color: var(--surface);
+    border-bottom: 1px solid var(--border);
+    padding: 16px 0;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
     display: flex;
     align-items: center;
-    justify-content: center;
-    z-index: 10000;
+    gap: 8px;
 }
 
-.ad-close-btn:hover {
-    background: #ef4444;
+.logo h1 {
+    font-size: 1.35rem;
+    font-weight: 800;
 }
 
-/* إخفاء الإعلان في حال تعطل أو تم حظره دون كسر التصميم */
-.ad-space:empty {
-    min-height: 60px;
+.logo h1 span {
+    color: var(--primary);
 }
 
-/* توافق الجوال */
+.nav-links {
+    display: flex;
+    gap: 18px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-muted);
+    font-weight: 700;
+    font-size: 0.95rem;
+}
+
+.nav-links a:hover {
+    color: var(--primary);
+}
+
+.tool-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 24px;
+    margin: 20px 0;
+}
+
+.input-container {
+    margin-bottom: 18px;
+}
+
+.input-label {
+    display: block;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: var(--text-main);
+    font-size: 1.05rem;
+}
+
+.input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.input-wrapper input {
+    width: 100%;
+    padding: 14px 20px 14px 45px;
+    font-size: 1.15rem;
+    font-family: inherit;
+    border: 2px solid var(--border);
+    border-radius: var(--radius);
+    outline: none;
+    background: #fff;
+    color: var(--text-main);
+}
+
+.input-wrapper input:focus {
+    border-color: var(--primary);
+}
+
+.btn-clear {
+    position: absolute;
+    left: 12px;
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    color: var(--text-muted);
+    cursor: pointer;
+    padding: 4px;
+}
+
+/* أزرار الفلاتر مع تباين 100% Accessible */
+.filters-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.filter-btn {
+    background: #f1f5f9;
+    border: 1px solid #cbd5e1;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-family: inherit;
+    font-size: 0.95rem;
+    font-weight: 700;
+    cursor: pointer;
+    color: #1e293b; /* تم التعديل لمنع خطأ التباين */
+}
+
+.filter-btn:hover {
+    background: #e2e8f0;
+}
+
+.filter-btn.active {
+    background: var(--primary);
+    color: #ffffff;
+    border-color: var(--primary);
+}
+
+/* شبكة البطاقات مع حجز مساحة دنيا ثابتة لمنع أي إزاحة */
+.results-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 14px;
+    min-height: 280px; /* تمنع قفزة الـ CLS */
+    contain: content;
+}
+
+.result-card {
+    background: #ffffff;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 14px 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+    min-height: 58px;
+}
+
+.result-card:hover {
+    border-color: var(--primary);
+    background-color: #f8fafc;
+}
+
+.decorated-text {
+    font-size: 1.15rem;
+    color: var(--text-main);
+    word-break: break-all;
+    font-weight: 500;
+}
+
+.btn-copy {
+    background: #f1f5f9;
+    color: #0f172a;
+    border: 1px solid #cbd5e1;
+    padding: 6px 12px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    border-radius: 6px;
+    cursor: pointer;
+    font-family: inherit;
+    white-space: nowrap;
+    margin-right: 8px;
+}
+
+.result-card.copied {
+    border-color: var(--accent);
+    background-color: #ecfdf5;
+}
+
+.result-card.copied .btn-copy {
+    background: var(--accent);
+    color: #ffffff;
+    border-color: var(--accent);
+}
+
+/* مقال السيو */
+.seo-article {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 30px;
+    margin: 25px 0;
+}
+
+.content-block {
+    margin-bottom: 25px;
+}
+
+.content-block h2 {
+    font-size: 1.4rem;
+    color: var(--text-main);
+    margin-bottom: 10px;
+    border-bottom: 2px solid #f1f5f9;
+    padding-bottom: 8px;
+}
+
+.content-block p {
+    color: var(--text-muted);
+    font-size: 1.05rem;
+    margin-bottom: 10px;
+}
+
+.steps-list {
+    padding-right: 20px;
+    color: var(--text-muted);
+}
+
+.steps-list li {
+    margin-bottom: 6px;
+}
+
+.faq-list details {
+    background: #f8fafc;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 12px 16px;
+}
+
+.faq-list summary {
+    font-weight: 700;
+    cursor: pointer;
+    color: var(--text-main);
+}
+
+.faq-list p {
+    margin-top: 8px;
+}
+
+.site-footer {
+    background: #0f172a;
+    color: #cbd5e1;
+    text-align: center;
+    padding: 20px 0;
+}
+
 @media (max-width: 768px) {
-    .ad-top-leaderboard {
-        min-height: 60px;
+    .header-container {
+        flex-direction: column;
+        gap: 10px;
     }
-    .ad-middle-banner {
-        min-height: 250px;
+    .results-grid {
+        grid-template-columns: 1fr;
+    }
+    .seo-article {
+        padding: 20px;
     }
 }
